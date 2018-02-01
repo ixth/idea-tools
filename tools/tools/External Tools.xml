@@ -1,0 +1,50 @@
+<toolSet name="External Tools">
+  <tool name="Update remote" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="ssh" />
+      <option name="PARAMETERS" value="dev '/home/hh/update_env.sh'" />
+    </exec>
+  </tool>
+  <tool name="Clean" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/clean.sh" />
+    </exec>
+  </tool>
+  <tool name="Watch" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/watch.sh" />
+    </exec>
+  </tool>
+  <tool name="Before Debug" showInMainMenu="false" showInProject="false" useConsole="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/before_debug.sh" />
+    </exec>
+  </tool>
+  <tool name="Tail service log" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/log.sh" />
+    </exec>
+  </tool>
+  <tool name="Switch to sources" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/switch.sh from-sources" />
+    </exec>
+  </tool>
+  <tool name="Switch to package" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/switch.sh from-pkg" />
+    </exec>
+  </tool>
+  <tool name="Restart" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="sh" />
+      <option name="PARAMETERS" value="hh-dev-tools/restart.sh" />
+    </exec>
+  </tool>
+</toolSet>

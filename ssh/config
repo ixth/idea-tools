@@ -1,0 +1,11 @@
+Host *
+    ForwardAgent yes
+
+Host dev
+    User hh
+    HostName replaceme.pyn.ru
+
+Host tunnel
+    HostName replaceme.pyn.ru
+    RemoteForward 32222 127.0.0.1:32222
+    RemoteForward 32223 127.0.0.1:32223
