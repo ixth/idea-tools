@@ -1,0 +1,4 @@
+Host dev
+    ForwardAgent yes
+    User hh
+    HostName %.pyn.ru
