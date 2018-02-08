@@ -20,6 +20,11 @@
       <option name="COMMAND" value=".idea/hhTools/before_debug" />
     </exec>
   </tool>
+  <tool name="After Debug" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value=".idea/hhTools/after_debug" />
+    </exec>
+  </tool>
   <tool name="Tail service log" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
       <option name="COMMAND" value=".idea/hhTools/log" />

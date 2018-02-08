@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git apply -R .idea/hhTools/debug.patch
+
+ssh dev docker restart frontik
