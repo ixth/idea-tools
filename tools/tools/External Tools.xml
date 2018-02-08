@@ -7,44 +7,39 @@
   </tool>
   <tool name="Clean" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/clean" />
+      <option name="COMMAND" value=".idea/hhTools/clean" />
     </exec>
   </tool>
   <tool name="Watch" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="true">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/watch" />
+      <option name="COMMAND" value=".idea/hhTools/watch" />
     </exec>
   </tool>
   <tool name="Before Debug" showInMainMenu="false" showInProject="false" useConsole="true" synchronizeAfterRun="true">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/before_debug" />
+      <option name="COMMAND" value=".idea/hhTools/before_debug" />
     </exec>
   </tool>
   <tool name="Tail service log" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/log" />
+      <option name="COMMAND" value=".idea/hhTools/log" />
     </exec>
   </tool>
   <tool name="Switch to sources" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/switch from-sources" />
+      <option name="COMMAND" value=".idea/hhTools/switch" />
+      <option name="PARAMETERS" value="from-sources" />
     </exec>
   </tool>
   <tool name="Switch to package" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/switch from-pkg" />
+      <option name="COMMAND" value=".idea/hhTools/switch" />
+      <option name="PARAMETERS" value="from-pkg" />
     </exec>
   </tool>
   <tool name="Restart" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
-      <option name="COMMAND" value="sh" />
-      <option name="PARAMETERS" value="-c .idea/hhTools/restart" />
+      <option name="COMMAND" value=".idea/hhTools/restart" />
     </exec>
   </tool>
 </toolSet>
