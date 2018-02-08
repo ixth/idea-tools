@@ -2,20 +2,6 @@
 
 set -e
 
-global_gitignore=`git config --global core.excludesfile`
-
-add_global_gitignore() {
-    if test -n global_gitignore; then
-        git config --global core.excludesfile $HOME/.gitignore
-    fi
-}
-
-ignore_tools() {
-    if ! grep -Fxq "^hh-dev-tools/" "$global_gitignore"; then
-        echo "hh-dev-tools/" >> "$global_gitignore"
-    fi
-}
-
 get_stand_subdomain() {
     local _stand
     read -p "Stand (just subdomain, i.e. 'bear', 'ts99'): " _stand
@@ -69,7 +55,7 @@ add_ssh_config() {
 
 copy_tools() {
     if test -n "$1" && test -e "$2/$3"; then
-        cp -v -R "$1/" "$2"
+        cp -v -pR "$1/" "$2"
     fi
 }
 
@@ -79,8 +65,6 @@ build_idea_config() {
     echo "Now import tools.jar via 'File > Import Settings' menu in IntelliJ IDEA")
 }
 
-add_global_gitignore
-ignore_tools
 add_ssh_config
 copy_tools "mhh" `osascript choose-folder.js mhh 2>/dev/null` "hhmobile/__init__.py"
 copy_tools "xhh" `osascript choose-folder.js xhh 2>/dev/null` "xhh/__init__.py"

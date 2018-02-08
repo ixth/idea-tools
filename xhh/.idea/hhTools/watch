@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ssh dev <<DOC
 cd codebase/hh.sites.main && \

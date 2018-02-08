@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-ssh dev docker exec -t frontik "easy_install pydevd"
+ssh dev docker exec -t frontik 'easy_install pydevd'
 
 git apply <<DOC
 --- a/xhh/__init__.py

@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="mhh" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug" singleton="true">
+    <module name="" />
+    <option name="PORT" value="32222" />
+    <option name="HOST" value="127.0.0.1" />
+    <PathMappingSettings>
+      <option name="pathMappings">
+        <list>
+          <mapping local-root="$PROJECT_DIR$/hhmobile" remote-root="/usr/lib/python2.7/dist-packages/hhmobile" />
+        </list>
+      </option>
+    </PathMappingSettings>
+    <option name="REDIRECT_OUTPUT" value="true" />
+    <option name="SUSPEND_AFTER_CONNECT" value="false" />
+    <method>
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_Before Debug" />
+    </method>
+  </configuration>
+</component>
