@@ -69,8 +69,7 @@ add_ssh_config() {
 
 copy_tools() {
     if test -n "$1" && test -e "$2/$3"; then
-        mkdir -p "$2/hh-dev-tools"
-        cp -v $1/* "$2/hh-dev-tools"
+        cp -v -R "$1/" "$2"
     fi
 }
 
