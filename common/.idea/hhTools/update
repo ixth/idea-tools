@@ -1,0 +1,19 @@
+#!/bin/sh
+
+ssh dev <<'DOC'
+    ~/update_deploy_dev.sh
+
+    cd /opt/deploy-dev/utils/
+
+    grep -oP '(?<=")\w+(?=": true)' packages_state.json > ~/from_source.txt
+
+    for service in `cat ~/from_source.txt`; do
+        ./hhc.py $service from-pkg
+    done
+
+    ./update_environment
+
+    for service in `cat ~/from_source.txt`; do
+        ./hhc.py $service from-sources
+    done
+DOC
