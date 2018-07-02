@@ -4,4 +4,6 @@ ssh dev docker exec -t frontik 'easy_install pydevd'
 
 git apply .idea/hhTools/debug.patch
 
+ssh -O check tunnel || ssh -fN tunnel
+
 ssh dev docker restart frontik

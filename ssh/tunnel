@@ -1,4 +1,7 @@
 Host tunnel
+    User hh
+    ControlPath ~/.ssh/%r@%h:%p
+    ControlMaster auto
     ForwardAgent yes
     HostName $stand.pyn.ru
     RemoteForward 32222 127.0.0.1:32222
