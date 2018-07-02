@@ -1,4 +1,4 @@
 Host dev
     ForwardAgent yes
     User hh
-    HostName %.pyn.ru
+    HostName $stand.pyn.ru

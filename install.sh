@@ -44,12 +44,12 @@ add_ssh_config() {
 
     if ! grep -xq "^Host dev" "$HOME/.ssh/config"; then
         sed '1s/^/\
-/; s/%/'$stand'/' ssh/dev >> "$HOME/.ssh/config"
+/; s/\$stand/'$stand'/' ssh/dev >> "$HOME/.ssh/config"
     fi
 
     if ! grep -xq "^Host tunnel" "$HOME/.ssh/config"; then
         sed '1s/^/\
-/; s/%/'$stand'/' ssh/tunnel >> "$HOME/.ssh/config"
+/; s/\$stand/'$stand'/' ssh/tunnel >> "$HOME/.ssh/config"
     fi
 }
 

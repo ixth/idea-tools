@@ -1,5 +1,5 @@
 Host tunnel
     ForwardAgent yes
-    HostName %.pyn.ru
+    HostName $stand.pyn.ru
     RemoteForward 32222 127.0.0.1:32222
     RemoteForward 32223 127.0.0.1:32223
