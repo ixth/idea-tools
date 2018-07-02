@@ -4,5 +4,5 @@ Host tunnel
     ControlMaster auto
     ForwardAgent yes
     HostName $stand.pyn.ru
-    RemoteForward 32222 127.0.0.1:32222
-    RemoteForward 32223 127.0.0.1:32223
+    LocalForward 32222 127.0.0.1:32222
+    LocalForward 32223 127.0.0.1:32223

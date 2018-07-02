@@ -1,10 +1,4 @@
 <toolSet name="External Tools">
-  <tool name="Update remote" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
-    <exec>
-      <option name="COMMAND" value="ssh" />
-      <option name="PARAMETERS" value="dev '/home/hh/update_env.sh'" />
-    </exec>
-  </tool>
   <tool name="Clean" showInMainMenu="true" showInProject="true" useConsole="true" synchronizeAfterRun="false">
     <exec>
       <option name="COMMAND" value=".idea/hhTools/clean" />
