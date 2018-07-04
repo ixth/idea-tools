@@ -1,9 +1,10 @@
 #!/bin/sh
 
-ssh dev docker exec -t frontik 'easy_install pydevd'
+# TODO: copy pycharm-debug.egg to host here
 
 git apply .idea/hhTools/debug.patch
 
-ssh -fN tunnel
+ssh -O check tunnel || ssh -fN tunnel
+ssh -O forward tunnel
 
 ssh dev docker restart frontik

@@ -2,4 +2,7 @@
 
 git apply -R .idea/hhTools/debug.patch
 
+ssh -O check tunnel || ssh -fN tunnel
+ssh -O cancel tunnel
+
 ssh dev docker restart frontik
