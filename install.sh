@@ -14,9 +14,7 @@ get_stand_subdomain() {
         fi
     fi
 
-    if test -n "$1"; then
-        eval "$1=\$_stand"
-    fi
+    echo "$_stand"
 }
 
 prompt() {
@@ -40,16 +38,13 @@ add_ssh_config() {
        return
    fi
 
-    local stand
-    get_stand_subdomain stand
-
     ssh_dir="$HOME/.ssh"
     if ! test -d "$ssh_dir"; then
         mkdir "$ssh_dir"
     fi
 
     if ! has_ssh_config "$HOME/.ssh/config"; then
-        sed "1 a\\$nl; s/%/$stand/" ssh/dev >> "$HOME/.ssh/config"
+        sed "1 a\\$nl; s/%/$(get_stand_subdomain)/" ssh/dev >> "$HOME/.ssh/config"
     fi
 }
 
