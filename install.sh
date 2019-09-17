@@ -2,6 +2,8 @@
 
 set -e
 
+ssh_dir="$HOME/.ssh"
+config="$ssh_dir/config"
 nl="$(printf '%b_' '\n')"; nl="${nl%_}"
 
 get_stand_subdomain() {
@@ -34,18 +36,20 @@ has_ssh_config() {
 }
 
 add_ssh_config() {
-   if ! prompt "I'm going to add 'dev' host alias to your ssh config, ok?"; then
-       return
-   fi
-
-    ssh_dir="$HOME/.ssh"
-    if ! test -d "$ssh_dir"; then
-        mkdir "$ssh_dir"
+    if has_ssh_config "$config"; then
+        if ! prompt "It seems like dev host has already been added to $config.
+Wanna add it anyway (either ways you'll be able to edit later)?"; then
+            return
+        fi
+    else
+        if ! prompt "I'm going to add 'dev' host alias to your ssh config, ok?"; then
+            return
+        fi
     fi
 
-    if ! has_ssh_config "$HOME/.ssh/config"; then
-        sed "1 a\\$nl; s/%/$(get_stand_subdomain)/" ssh/dev >> "$HOME/.ssh/config"
-    fi
+    mkdir -p "$ssh_dir"
+
+    sed "1 a\\$nl; s/%/$(get_stand_subdomain)/" ssh/dev >> "$HOME/.ssh/config"
 }
 
 copy_tools() {
