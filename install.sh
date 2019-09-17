@@ -2,6 +2,8 @@
 
 set -e
 
+nl="$(printf '%b_' '\n')"; nl="${nl%_}"
+
 get_stand_subdomain() {
     local _stand
     read -p "Stand (just subdomain, i.e. 'bear', 'ts99'): " _stand
@@ -47,8 +49,7 @@ add_ssh_config() {
     fi
 
     if ! has_ssh_config "$HOME/.ssh/config"; then
-        sed '1s/^/\
-/; s/%/'$stand'/' ssh/dev >> "$HOME/.ssh/config"
+        sed "1 a\\$nl; s/%/$stand/" ssh/dev >> "$HOME/.ssh/config"
     fi
 }
 
