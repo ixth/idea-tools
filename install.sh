@@ -7,7 +7,7 @@ get_stand_subdomain() {
     read -p "Stand (just subdomain, i.e. 'bear', 'ts99'): " _stand
 
     if ! nslookup "$_stand" 1>/dev/null; then
-        if ! prompt "Can't resolve $stand.pyn.ru, are you sure there's no mistake?"; then
+        if ! prompt "Can't resolve $stand.pyn.ru. Continue anyway?"; then
             exit 1
         fi
     fi
