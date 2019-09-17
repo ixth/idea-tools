@@ -30,7 +30,7 @@ prompt() {
 }
 
 add_ssh_config() {
-   if ! prompt "I'm going to add 'dev' and 'tunnel' host aliases to your ssh config, ok?"; then
+   if ! prompt "I'm going to add 'dev' host alias to your ssh config, ok?"; then
        return
    fi
 
@@ -45,11 +45,6 @@ add_ssh_config() {
     if ! grep -xq "^Host dev" "$HOME/.ssh/config"; then
         sed '1s/^/\
 /; s/%/'$stand'/' ssh/dev >> "$HOME/.ssh/config"
-    fi
-
-    if ! grep -xq "^Host tunnel" "$HOME/.ssh/config"; then
-        sed '1s/^/\
-/; s/%/'$stand'/' ssh/tunnel >> "$HOME/.ssh/config"
     fi
 }
 
