@@ -29,6 +29,10 @@ prompt() {
     done
 }
 
+has_ssh_config() {
+    grep -xq "^Host dev" "$1"
+}
+
 add_ssh_config() {
    if ! prompt "I'm going to add 'dev' host alias to your ssh config, ok?"; then
        return
@@ -42,7 +46,7 @@ add_ssh_config() {
         mkdir "$ssh_dir"
     fi
 
-    if ! grep -xq "^Host dev" "$HOME/.ssh/config"; then
+    if ! has_ssh_config "$HOME/.ssh/config"; then
         sed '1s/^/\
 /; s/%/'$stand'/' ssh/dev >> "$HOME/.ssh/config"
     fi
