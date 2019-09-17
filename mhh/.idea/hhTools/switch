@@ -1,3 +1,0 @@
-#!/bin/sh
-
-ssh dev 'cd /opt/deploy-dev/utils && ./hhc.py hhmobile ' $1

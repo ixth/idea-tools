@@ -1,7 +1,0 @@
-#!/bin/sh
-
-ssh dev <<DOC
-cd codebase/hhmobile && \
-yarn --non-interactive --force && \
-yarn dev
-DOC

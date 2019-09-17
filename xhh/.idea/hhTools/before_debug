@@ -1,7 +1,0 @@
-#!/bin/sh
-
-ssh dev docker exec -t frontik 'easy_install pydevd'
-
-git apply .idea/hhTools/debug.patch
-
-ssh dev docker restart frontik
