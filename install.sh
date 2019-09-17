@@ -66,6 +66,6 @@ build_idea_config() {
 }
 
 add_ssh_config
-copy_tools "mhh" `osascript choose-folder.js mhh 2>/dev/null` "hhmobile/__init__.py"
-copy_tools "xhh" `osascript choose-folder.js xhh 2>/dev/null` "xhh/__init__.py"
+copy_tools "mhh" "$(./choose-folder.sh mhh)" "hhmobile/__init__.py"
+copy_tools "xhh" "$(./choose-folder.sh xhh)" "xhh/__init__.py"
 build_idea_config
