@@ -53,14 +53,14 @@ Wanna add it anyway (either ways you'll be able to edit later)?"; then
 }
 
 copy_tools() {
-    if test -n "$1" && test -e "$2/$3"; then
+    if [ -n "$1" ] && [ -e "$2/$3" ]; then
         cp -v -pR "$1/" "$2"
     fi
 }
 
 build_idea_config() {
     (cd tools && \
-    zip -qr ../tools.jar * && \
+    zip -qr ../tools.jar -- * && \
     echo "Now import tools.jar via 'File > Import Settings' menu in IntelliJ IDEA")
 }
 
