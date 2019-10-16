@@ -2,7 +2,7 @@
 
 set +e
 
-cd ~/codebase/hh.sites.main
+cd "$CODEBASE_PATH"
 sudo chown -R hh:hh .
 git fetch
 git clean -dfx

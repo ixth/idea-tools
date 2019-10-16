@@ -2,7 +2,7 @@
   <tool name="Clean" showInMainMenu="true" showInProject="true" useConsole="true">
     <exec>
       <option name="COMMAND" value="./remote_exec.sh" />
-      <option name="PARAMETERS" value="clean.sh" />
+      <option name="PARAMETERS" value="kill_zombies.sh clean.sh" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
     </exec>
   </tool>
@@ -16,7 +16,14 @@
   <tool name="Rebuild from scratch" showInMainMenu="true" showInProject="true" useConsole="true">
     <exec>
       <option name="COMMAND" value="./remote_exec.sh" />
-      <option name="PARAMETERS" value="clean.sh build.sh" />
+      <option name="PARAMETERS" value="kill_zombies.sh clean.sh build.sh" />
+      <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
+    </exec>
+  </tool>
+  <tool name="Kill zombie scripts" showInMainMenu="true" showInProject="true" useConsole="true">
+    <exec>
+      <option name="COMMAND" value="./remote_exec.sh" />
+      <option name="PARAMETERS" value="kill_zombies.sh" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
     </exec>
   </tool>
