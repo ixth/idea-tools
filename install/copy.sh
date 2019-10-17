@@ -1,9 +1,13 @@
 #!/usr/bin/env sh
 
+COMMON_SRC="common/"
+
 copy_tools() {
-    if [ -n "$1" ] && [ -e "$2/$3" ]; then
-        cp -v -pR "common/" "$2"
-        cp -v -pR "$1/" "$2"
+    OVERRIDES_SRC="$1"
+    PROJECT_FOLDER="$2"
+    APP_MODULE_CHECK="$3"
+    if [ -d "$OVERRIDES_SRC" ] && [ -e "$PROJECT_FOLDER/$APP_MODULE_CHECK" ]; then
+        cp -v -pR "$COMMON_SRC" "$PROJECT_FOLDER"
+        cp -v -pR "$OVERRIDES_SRC/" "$PROJECT_FOLDER"
     fi
 }
-
