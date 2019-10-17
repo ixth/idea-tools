@@ -34,4 +34,11 @@
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
     </exec>
   </tool>
+  <tool name="Add translation" showInMainMenu="true" showInProject="true" useConsole="true">
+    <exec>
+      <option name="COMMAND" value="./create_trl.sh" />
+      <option name="PARAMETERS" value="$ProjectFileDir$" />
+      <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
+    </exec>
+  </tool>
 </toolSet>
