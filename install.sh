@@ -13,7 +13,7 @@ choose_folder() {
     FOLDER=${!CONFIG_KEY_NAME}
     if [ -z "$FOLDER" ]; then
         FOLDER=$(./choose-folder.sh "$OVERRIDE_SRC")
-        eval "$CONFIG_KEY_NAME=$FOLDER"
+        declare "$CONFIG_KEY_NAME=$FOLDER"
         save_config
     fi
     echo "$FOLDER"
