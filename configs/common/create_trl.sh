@@ -9,4 +9,5 @@ if [ ! -e "$TRL_FILE" ]; then
 /* Use \u00a0 as &nbsp; */
 select insertTranslation('key', '');
 EOF
+echo "$TRL_PATH/$BRANCH-trans.sql"
 fi
