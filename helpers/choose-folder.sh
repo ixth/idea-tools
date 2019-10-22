@@ -25,7 +25,8 @@ command_exists() {
 }
 
 if command_exists osascript; then
-    osascript ./choose-folder.js "$@" 2>/dev/null
+    SCRIPT_DIR=$(dirname "$0")
+    osascript "$SCRIPT_DIR/choose-folder.js" "$@" 2>/dev/null
 else
     prompt_for_path
 fi
