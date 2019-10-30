@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-. .env-common --source-only
-. .env-local --source-only
-
-ssh dev psql "$DATABASE_URL" < "$PROJECT_ROOT/$TRL_PATH/$BRANCH-trans.sql"
+psql "$DATABASE_URL" < "$CODEBASE_PATH/$TRL_PATH/$BRANCH-trans.sql"
+if nc -z 127.0.0.1 "$HH_TRANSLATIONS_PORT"; then
+    /opt/deploy-dev/utils/hhc.py hh-translations deploy
+fi

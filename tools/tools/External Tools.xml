@@ -43,8 +43,8 @@
   </tool>
   <tool name="Update translations" showInMainMenu="true" showInProject="true" useConsole="true">
     <exec>
-      <option name="COMMAND" value="./update_trl.sh" />
-      <option name="PARAMETERS" value="$ProjectFileDir$" />
+      <option name="COMMAND" value="./remote_exec.sh" />
+      <option name="PARAMETERS" value="update_trl.sh" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.idea/hhTools" />
     </exec>
   </tool>
